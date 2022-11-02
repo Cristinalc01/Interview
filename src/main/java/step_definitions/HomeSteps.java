@@ -21,18 +21,15 @@ public class HomeSteps implements CommonPage {
     }
 
 
-    @When("I click in nav button {string}")
-    public void iClickInNavButton(String button) {
-        BrowserUtils.click(BrowserUtils.getDriver().findElement(By.xpath(
-                String.format(XPATH_TEMPLATE_LINKTEXT, button))));
-
-    }
-
-
-
 
 
     }
+
+
+
+
+
+
 
 
 

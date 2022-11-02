@@ -14,31 +14,26 @@ public class DashBoardSteps implements CommonPage {
 
     DashBoardPage page;
 
-    public DashBoardSteps(){
+    public DashBoardSteps() {
         this.page = new DashBoardPage();
     }
-    @Then("I click in Enter new question")
-    public void iClickInEnterNewQuestion() {
-        BrowserUtils.click(BrowserUtils.getDriver().findElement(By.xpath(String.format(XPATH_TEMPLATE_BUTTON, "Enter new question"))));
+
+
+
+    @When("I fill the input dashboard")
+    public void iFillTheInputDashboard() {
+        BrowserUtils.sendKeys(page.dashbd, "Java");
     }
 
-    @Then("I fill out the field New Dashboard")
-    public void iFillOutTheFieldNewDashboard() {
-            BrowserUtils.sendKeys(page.question,"what is Java?");
-        }
 
-    @Then("I click a button Enter")
-    public void iClickAButtonEnter() {
-        BrowserUtils.click(BrowserUtils.getDriver().findElement(By.xpath(String.format(XPATH_TEMPLATE_BUTTON, "Enter"))));
-
+    @Then("I click in the button add")
+    public void iClickInTheButtonAdd() {
+        BrowserUtils.click(page.add);
 
     }
 
-    @And("I verify is new dashboard is displayed")
-    public void iVerifyIsNewDashboardIsDisplayed() {
-        String actualtxt = BrowserUtils.getText(page.dasbd);
-        String expected = "what is Java?";
-        BrowserUtils.assertEquals(expected, actualtxt);
+    @Then("I Verify the new dashboard is displayed")
+    public void iVerifyTheNewDashboardIsDisplayed() {
+        BrowserUtils.isDisplayed(page.dashbword);
     }
-
-    }
+}
