@@ -4,7 +4,7 @@ Feature: add new dashboard tests
 
  Background: Login to website
     Given I open website url
-    When I login using "test@yahoo.com" and "test123"
+    When I login using "admin@yahoo.com" and "admin123"
     When I click in nav button "New Dashboard"
 
   @US1012
