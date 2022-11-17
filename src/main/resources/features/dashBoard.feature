@@ -6,6 +6,10 @@ Feature: add new dashboard tests
     Given I open website url
     When I login using "admin@yahoo.com" and "admin123"
 
+    When I click in nav button "New Dashboard"
+
+
+
 
   @US1012
      Scenario: add new dashborad
