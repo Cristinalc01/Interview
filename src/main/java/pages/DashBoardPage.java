@@ -11,10 +11,13 @@ public class DashBoardPage {
 
         PageFactory.initElements(BrowserUtils.getDriver(), this);
     }
-        @FindBy(xpath = "//input[@name='question']")
-        public WebElement question;
+  @FindBy(xpath = "//input[@placeholder='New dashboard']")
+      public WebElement dashbd;
 
-    @FindBy(xpath = "//p[text()='what is java?   ']")
-    public WebElement dasbd;
+    @FindBy(xpath = "//button[normalize-space()='+ Add']")
+    public WebElement add;
 
-    }
+    @FindBy(xpath = "//button[normalize-space()='Java']//img")
+    public WebElement dashbword;
+
+}
